@@ -382,7 +382,7 @@ createBtn.onclick = () => {
 
   
 
-  options = txt.split("\n").map(v=>v.trim()).filter(v=>v);
+  options = txt.split("\n").map(v => v.trim()).filter(v => v);
 
   
 
@@ -414,9 +414,19 @@ createBtn.onclick = () => {
 
 
 
-function makeSlices(){
+function makeSlices() {
 
   const sliceAngle = 360 / options.length;
+
+  const colors = [
+
+    "#FFD6E0", "#FFEDC4", "#C4F5E6", "#C6E3FF", "#FFE0F8",
+
+    "#F7FFD4", "#FFD6B8", "#D9C2FF", "#FFF3CD", "#FFCAD4"
+
+  ];
+
+
 
   options.forEach((opt, index) => {
 
@@ -424,11 +434,33 @@ function makeSlices(){
 
     slice.className = "slice";
 
+
+
     const angle = index * sliceAngle;
 
     slice.style.transform = `rotate(${angle}deg) skewY(${90 - sliceAngle}deg)`;
 
-    slice.innerHTML = `<div style="transform: skewY(${-(90 - sliceAngle)}deg) rotate(${sliceAngle/2}deg)">${opt}</div>`;
+    slice.style.background = colors[index % colors.length];
+
+
+
+    slice.innerHTML = `
+
+      <div style="
+
+        transform: skewY(${-(90 - sliceAngle)}deg) rotate(${sliceAngle/2}deg);
+
+        text-align:right;
+
+        font-size:13px;
+
+        padding-right:6px;
+
+        color:#7a4a28;
+
+      ">${opt}</div>
+
+    `;
 
     wheel.appendChild(slice);
 
@@ -437,6 +469,8 @@ function makeSlices(){
 }
 
 
+
+// ⭐核心旋转逻辑
 
 spinBtn.onclick = () => {
 
@@ -450,6 +484,10 @@ spinBtn.onclick = () => {
 
   const randomSpin = 360 * 5 + Math.random() * 360;
 
+
+
+  wheel.style.transition = "transform 4s cubic-bezier(.15,1,.3,1)";
+
   wheel.style.transform = `rotate(${currentRotation + randomSpin}deg)`;
 
 
@@ -458,19 +496,21 @@ spinBtn.onclick = () => {
 
     currentRotation = (currentRotation + randomSpin) % 360;
 
+
+
     const sliceAngle = 360 / options.length;
 
-    const normalized = (360 - currentRotation + sliceAngle/2) % 360;
+    const correctAngle = (360 - currentRotation) % 360;
 
-    const index = Math.floor(normalized / sliceAngle);
+    const index = Math.floor(correctAngle / sliceAngle);
 
     const chosen = options[index];
 
 
 
-    resultMsg.innerHTML = `🎀 今天就选：${chosen}`;
+    resultMsg.innerHTML = `🎀 今天就选：${chosen} 💝`;
 
-    
+
 
     floatingHeart();
 
@@ -492,13 +532,13 @@ function floatingHeart(){
 
   heart.className = "heart";
 
-  heart.style.left = (50 + Math.random()*16 - 8) + "%";
-
   heart.innerHTML = ["💖","✨","🌸","💗"][Math.floor(Math.random()*4)];
+
+  heart.style.left = (50 + Math.random()*16 - 8) + "%";
 
   document.body.appendChild(heart);
 
-  setTimeout(()=> heart.remove(),1600);
+  setTimeout(() => heart.remove(), 1500);
 
 }
 
