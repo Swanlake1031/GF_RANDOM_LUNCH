@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>今天吃什么 🎀专属转盘</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+
+body {
+
+  background-color: #fff8f0;
+
+  font-family: "Chalkboard SE", "Comic Sans MS", "PingFang SC", sans-serif;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 18px;
+
+  margin: 0;
+
+}
+
+.container {
+
+  width: 350px;
+
+  background: #ffffff;
+
+  padding: 20px 16px 24px;
+
+  border-radius: 25px;
+
+  box-shadow: 0px 6px 18px rgba(255, 193, 158, 0.4);
+
+  text-align: center;
+
+  border: 3px dashed #ffd4a0;
+
+  position: relative;
+
+}
+
+.container::before {
+
+  content: "🍓";
+
+  position: absolute;
+
+  top: -22px;
+
+  left: 18px;
+
+  font-size: 26px;
+
+}
+
+.container::after {
+
+  content: "🐭";
+
+  position: absolute;
+
+  top: -22px;
+
+  right: 18px;
+
+  font-size: 26px;
+
+}
+
+h1 {
+
+  font-size: 22px;
+
+  margin-bottom: 4px;
+
+  font-weight: 700;
+
+  color: #ff7e6e;
+
+}
+
+.subtitle {
+
+  color: #c59f78;
+
+  font-size: 13px;
+
+  margin-bottom: 12px;
+
+}
+
+.inputArea textarea {
+
+  width: 94%;
+
+  height: 70px;
+
+  border-radius: 14px;
+
+  border: 2px dotted #ffc9a3;
+
+  padding: 10px;
+
+  resize: none;
+
+  font-size: 13px;
+
+  outline: none;
+
+  background: #fffdf7;
+
+  color: #a56942;
+
+}
+
+.inputHint {
+
+  font-size: 12px;
+
+  color: #c79b6a;
+
+  margin-top: 4px;
+
+}
+
+.btn {
+
+  margin-top: 12px;
+
+  background: #ffb7c5;
+
+  color: white;
+
+  padding: 10px 28px;
+
+  border-radius: 30px;
+
+  border: 0;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+  box-shadow: 0 5px 12px rgba(255,150,160,0.4);
+
+  font-weight: bold;
+
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn:active { transform: translateY(2px); box-shadow: none; }
+
+.wheel-wrap {
+
+  margin: 16px auto;
+
+  width: 260px;
+
+  height: 260px;
+
+  position: relative;
+
+  display: none;
+
+}
+
+.pointer {
+
+  position: absolute;
+
+  width: 0;
+
+  height: 0;
+
+  border-left: 18px solid transparent;
+
+  border-right: 18px solid transparent;
+
+  border-bottom: 32px solid #ff8888;
+
+  left: 50%;
+
+  top: -10px;
+
+  transform: translateX(-50%);
+
+}
+
+.wheel {
+
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 50%;
+
+  border: 6px solid #ffd999;
+
+  overflow: hidden;
+
+  position: relative;
+
+  transition: transform 4s cubic-bezier(0.25, 1, 0.4, 1);
+
+  background: #fffce6;
+
+  box-shadow: inset 0px 0px 6px rgba(255,178,100,0.5);
+
+}
+
+.slice {
+
+  position: absolute;
+
+  width: 50%;
+
+  height: 50%;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform-origin: 0 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  padding-right: 10px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  border-right: 1px dashed rgba(255,200,100,0.5);
+
+  color: #b06a51;
+
+}
+
+.resultMsg {
+
+  font-size: 15px;
+
+  color: #ff6f6f;
+
+  font-weight: bold;
+
+  height: 28px;
+
+}
+
+.heart {
+
+  position: fixed;
+
+  bottom: 25px;
+
+  font-size: 22px;
+
+  opacity: 0;
+
+  animation: floatUp 1.6s ease-out;
+
+}
+
+@keyframes floatUp {
+
+  0% { transform: translateY(0px); opacity: 1; }
+
+  100% { transform: translateY(-85px); opacity: 0; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+  <h1>吃什么好呢 🍰</h1>
+
+  <div class="subtitle">输入选项，再生成转盘 💝</div>
+
+
+
+  <div class="inputArea">
+
+    <textarea id="inputBox" placeholder="每行一个，例如：
+
+寿司
+
+炸鸡
+
+披萨
+
+奶茶
+
+沙拉
+
+..."></textarea>
+
+    <div class="inputHint">支持 3~12 项内容哟 ✨</div>
+
+  </div>
+
+
+
+  <button class="btn" id="createBtn">生成转盘 🎡</button>
+
+
+
+  <div class="wheel-wrap" id="wheelWrap">
+
+    <div class="pointer"></"></div>
+
+    <div class="wheel" id="wheel"></div>
+
+  </div>
+
+
+
+  <button class="btn" id="spinBtn" style="display:none">开始抽取 ✨</button>
+
+
+
+  <div class="resultMsg" id="resultMsg"></div>
+
+</div>
+
+
+
+<script>
+
+let options = [];
+
+let currentRotation = 0;
+
+let spinning = false;
+
+
+
+const createBtn = document.getElementById("createBtn");
+
+const spinBtn = document.getElementById("spinBtn");
+
+const wheelWrap = document.getElementById("wheelWrap");
+
+const resultMsg = document.getElementById("resultMsg");
+
+const wheel = document.getElementById("wheel");
+
+const inputBox = document.getElementById("inputBox");
+
+
+
+createBtn.onclick = () => {
+
+  const txt = inputBox.value.trim();
+
+  if(!txt) return alert("写点东西嘛！🥺");
+
+  
+
+  options = txt.split("\n").map(v=>v.trim()).filter(v=>v);
+
+  
+
+  if(options.length < 3) return alert("至少 3 个选项喔～");
+
+  if(options.length > 12) return alert("最多 12 个，不然太挤啦～");
+
+
+
+  wheel.innerHTML = "";
+
+  resultMsg.innerHTML = "";
+
+  
+
+  makeSlices();
+
+
+
+  wheelWrap.style.display = "block";
+
+  spinBtn.style.display = "inline-block";
+
+  currentRotation = 0;
+
+  wheel.style.transform = "rotate(0deg)";
+
+};
+
+
+
+function makeSlices(){
+
+  const sliceAngle = 360 / options.length;
+
+  options.forEach((opt, index) => {
+
+    const slice = document.createElement("div");
+
+    slice.className = "slice";
+
+    const angle = index * sliceAngle;
+
+    slice.style.transform = `rotate(${angle}deg) skewY(${90 - sliceAngle}deg)`;
+
+    slice.innerHTML = `<div style="transform: skewY(${-(90 - sliceAngle)}deg) rotate(${sliceAngle/2}deg)">${opt}</div>`;
+
+    wheel.appendChild(slice);
+
+  });
+
+}
+
+
+
+spinBtn.onclick = () => {
+
+  if(spinning) return;
+
+  spinning = true;
+
+  spinBtn.disabled = true;
+
+
+
+  const randomSpin = 360 * 5 + Math.random() * 360;
+
+  wheel.style.transform = `rotate(${currentRotation + randomSpin}deg)`;
+
+
+
+  setTimeout(() => {
+
+    currentRotation = (currentRotation + randomSpin) % 360;
+
+    const sliceAngle = 360 / options.length;
+
+    const normalized = (360 - currentRotation + sliceAngle/2) % 360;
+
+    const index = Math.floor(normalized / sliceAngle);
+
+    const chosen = options[index];
+
+
+
+    resultMsg.innerHTML = `🎀 今天就选：${chosen}`;
+
+    
+
+    floatingHeart();
+
+
+
+    spinning = false;
+
+    spinBtn.disabled = false;
+
+  }, 4000);
+
+};
+
+
+
+function floatingHeart(){
+
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+
+  heart.style.left = (50 + Math.random()*16 - 8) + "%";
+
+  heart.innerHTML = ["💖","✨","🌸","💗"][Math.floor(Math.random()*4)];
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=> heart.remove(),1600);
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
+
