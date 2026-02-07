@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001 /* CheeseAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100 /* CheeseAppApp.swift */; };
+		002 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101 /* MainTabView.swift */; };
+		010 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110 /* SupabaseClient.swift */; };
+		020 /* BasePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120 /* BasePost.swift */; };
+		021 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121 /* User.swift */; };
+		022 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122 /* ChatMessage.swift */; };
+		030 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130 /* AuthService.swift */; };
+		031 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131 /* ChatService.swift */; };
+		032 /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132 /* ImageUploadService.swift */; };
+		040 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140 /* Formatters.swift */; };
+		041 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141 /* Constants.swift */; };
+		050 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150 /* Date+Extensions.swift */; };
+		051 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151 /* View+Extensions.swift */; };
+		060 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160 /* CustomButton.swift */; };
+		061 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161 /* LoadingView.swift */; };
+		062 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162 /* ErrorView.swift */; };
+		063 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163 /* ImagePicker.swift */; };
+		064 /* ContentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164 /* ContentCardView.swift */; };
+		065 /* ForumCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165 /* ForumCardView.swift */; };
+		070 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170 /* Colors.swift */; };
+		071 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171 /* Fonts.swift */; };
+		072 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172 /* Spacing.swift */; };
+		080 /* RentPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180 /* RentPost.swift */; };
+		081 /* RentFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181 /* RentFilterOptions.swift */; };
+		082 /* RentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182 /* RentFormatter.swift */; };
+		083 /* RentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183 /* RentService.swift */; };
+		084 /* RentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184 /* RentListViewModel.swift */; };
+		085 /* RentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185 /* RentDetailViewModel.swift */; };
+		086 /* CreateRentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186 /* CreateRentViewModel.swift */; };
+		087 /* RentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187 /* RentListView.swift */; };
+		088 /* RentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188 /* RentDetailView.swift */; };
+		089 /* CreateRentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189 /* CreateRentView.swift */; };
+		08A /* RentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A /* RentCardView.swift */; };
+		090 /* SecondhandPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190 /* SecondhandPost.swift */; };
+		091 /* SecondhandListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191 /* SecondhandListView.swift */; };
+		092 /* SecondhandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192 /* SecondhandService.swift */; };
+		093 /* CreateSecondhandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193 /* CreateSecondhandView.swift */; };
+		0A0 /* RidePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0 /* RidePost.swift */; };
+		0A1 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1 /* RideListView.swift */; };
+		0A2 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2 /* RideService.swift */; };
+		0A3 /* CreateRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3 /* CreateRideView.swift */; };
+		0B0 /* TeamPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0 /* TeamPost.swift */; };
+		0B1 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1 /* TeamListView.swift */; };
+		0B2 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2 /* TeamService.swift */; };
+		0B3 /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3 /* CreateTeamView.swift */; };
+		0C0 /* ForumPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0 /* ForumPost.swift */; };
+		0C1 /* ForumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1 /* ForumListView.swift */; };
+		0C2 /* ForumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2 /* ForumService.swift */; };
+		0C3 /* CreateForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3 /* CreateForumView.swift */; };
+		0D1 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1 /* ChatListView.swift */; };
+		0E0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0 /* AuthViewModel.swift */; };
+		0E1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1 /* ProfileView.swift */; };
+		0E2 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2 /* AuthView.swift */; };
+		200A /* PostKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200 /* PostKind.swift */; };
+		201A /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201 /* CommunityService.swift */; };
+		202A /* UserPostSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202 /* UserPostSummary.swift */; };
+		203A /* UserPostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203 /* UserPostsService.swift */; };
+		204A /* ReportPostSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204 /* ReportPostSheet.swift */; };
+		205A /* SupportCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205 /* SupportCenterView.swift */; };
+		206A /* UserPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206 /* UserPostsView.swift */; };
+		207A /* PostReactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207 /* PostReactionService.swift */; };
+		208A /* EditPostSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208 /* EditPostSheet.swift */; };
+		0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0 /* Assets.xcassets */; };
+		CR1 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CR11 /* CreatePostView.swift */; };
+		DBA54B9C2F2D43DA0073E17A /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54B9B2F2D43DA0073E17A /* Auth */; };
+		DBA54B9E2F2D43DA0073E17A /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54B9D2F2D43DA0073E17A /* Functions */; };
+		DBA54BA02F2D43DA0073E17A /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54B9F2F2D43DA0073E17A /* PostgREST */; };
+		DBA54BA22F2D43DA0073E17A /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54BA12F2D43DA0073E17A /* Realtime */; };
+		DBA54BA42F2D43DA0073E17A /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54BA32F2D43DA0073E17A /* Storage */; };
+		DBA54BA72F2D44C30073E17A /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DBA54BA62F2D44C30073E17A /* Supabase */; };
+		H01 /* HomeCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = H11 /* HomeCardItem.swift */; };
+		H02 /* HomeQuickAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = H12 /* HomeQuickAction.swift */; };
+		H03 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = H21 /* HomeViewModel.swift */; };
+		H04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H31 /* HomeView.swift */; };
+		H05 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H41 /* HomeHeaderView.swift */; };
+		H06 /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H42 /* HomeSearchBarView.swift */; };
+		H07 /* QuickActionsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H43 /* QuickActionsRowView.swift */; };
+		H08 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = H44 /* SectionHeaderView.swift */; };
+		S01 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = S11 /* SearchView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		100 /* CheeseAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheeseAppApp.swift; sourceTree = "<group>"; };
+		101 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		110 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
+		120 /* BasePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePost.swift; sourceTree = "<group>"; };
+		121 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		122 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		130 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		131 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		132 /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
+		140 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		150 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		151 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		160 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		161 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		162 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		163 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		164 /* ContentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCardView.swift; sourceTree = "<group>"; };
+		165 /* ForumCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCardView.swift; sourceTree = "<group>"; };
+		170 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		171 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		172 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		180 /* RentPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentPost.swift; sourceTree = "<group>"; };
+		181 /* RentFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentFilterOptions.swift; sourceTree = "<group>"; };
+		182 /* RentFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentFormatter.swift; sourceTree = "<group>"; };
+		183 /* RentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentService.swift; sourceTree = "<group>"; };
+		184 /* RentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentListViewModel.swift; sourceTree = "<group>"; };
+		185 /* RentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailViewModel.swift; sourceTree = "<group>"; };
+		186 /* CreateRentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRentViewModel.swift; sourceTree = "<group>"; };
+		187 /* RentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentListView.swift; sourceTree = "<group>"; };
+		188 /* RentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentDetailView.swift; sourceTree = "<group>"; };
+		189 /* CreateRentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRentView.swift; sourceTree = "<group>"; };
+		18A /* RentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentCardView.swift; sourceTree = "<group>"; };
+		190 /* SecondhandPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondhandPost.swift; sourceTree = "<group>"; };
+		191 /* SecondhandListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondhandListView.swift; sourceTree = "<group>"; };
+		192 /* SecondhandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondhandService.swift; sourceTree = "<group>"; };
+		193 /* CreateSecondhandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSecondhandView.swift; sourceTree = "<group>"; };
+		1A0 /* RidePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidePost.swift; sourceTree = "<group>"; };
+		1A1 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
+		1A2 /* RideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideService.swift; sourceTree = "<group>"; };
+		1A3 /* CreateRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRideView.swift; sourceTree = "<group>"; };
+		1B0 /* TeamPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPost.swift; sourceTree = "<group>"; };
+		1B1 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
+		1B2 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
+		1B3 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamView.swift; sourceTree = "<group>"; };
+		1C0 /* ForumPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPost.swift; sourceTree = "<group>"; };
+		1C1 /* ForumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumListView.swift; sourceTree = "<group>"; };
+		1C2 /* ForumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumService.swift; sourceTree = "<group>"; };
+		1C3 /* CreateForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateForumView.swift; sourceTree = "<group>"; };
+		1D1 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		1E0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		1E1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1E2 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		200 /* PostKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostKind.swift; sourceTree = "<group>"; };
+		201 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
+		202 /* UserPostSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostSummary.swift; sourceTree = "<group>"; };
+		203 /* UserPostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsService.swift; sourceTree = "<group>"; };
+		204 /* ReportPostSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPostSheet.swift; sourceTree = "<group>"; };
+		205 /* SupportCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCenterView.swift; sourceTree = "<group>"; };
+		206 /* UserPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsView.swift; sourceTree = "<group>"; };
+		207 /* PostReactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReactionService.swift; sourceTree = "<group>"; };
+		208 /* EditPostSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostSheet.swift; sourceTree = "<group>"; };
+		1F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAA /* CheeseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheeseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CR11 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		H11 /* HomeCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardItem.swift; sourceTree = "<group>"; };
+		H12 /* HomeQuickAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuickAction.swift; sourceTree = "<group>"; };
+		H21 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		H31 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		H41 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		H42 /* HomeSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
+		H43 /* QuickActionsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsRowView.swift; sourceTree = "<group>"; };
+		H44 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		S11 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA54BA02F2D43DA0073E17A /* PostgREST in Frameworks */,
+				DBA54B9E2F2D43DA0073E17A /* Functions in Frameworks */,
+				DBA54BA72F2D44C30073E17A /* Supabase in Frameworks */,
+				DBA54B9C2F2D43DA0073E17A /* Auth in Frameworks */,
+				DBA54BA42F2D43DA0073E17A /* Storage in Frameworks */,
+				DBA54BA22F2D43DA0073E17A /* Realtime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBA54BA52F2D44BE0073E17A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G00 = {
+			isa = PBXGroup;
+			children = (
+				G01 /* CheeseApp */,
+				G02 /* Products */,
+				DBA54BA52F2D44BE0073E17A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		G01 /* CheeseApp */ = {
+			isa = PBXGroup;
+			children = (
+				100 /* CheeseAppApp.swift */,
+				101 /* MainTabView.swift */,
+				G10 /* Core */,
+				G20 /* Shared */,
+				G30 /* Features */,
+				1F0 /* Assets.xcassets */,
+			);
+			path = CheeseApp;
+			sourceTree = "<group>";
+		};
+		G02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAA /* CheeseApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G10 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				G11 /* Config */,
+				G12 /* Models */,
+				G13 /* Services */,
+				G14 /* Utils */,
+				G15 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		G11 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				110 /* SupabaseClient.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		G12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				120 /* BasePost.swift */,
+				121 /* User.swift */,
+				122 /* ChatMessage.swift */,
+				200 /* PostKind.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G13 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				130 /* AuthService.swift */,
+				131 /* ChatService.swift */,
+				132 /* ImageUploadService.swift */,
+				201 /* CommunityService.swift */,
+				207 /* PostReactionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G14 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				140 /* Formatters.swift */,
+				141 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		G15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				150 /* Date+Extensions.swift */,
+				151 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		G20 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				G21 /* Components */,
+				G22 /* Theme */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		G21 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				160 /* CustomButton.swift */,
+				161 /* LoadingView.swift */,
+				162 /* ErrorView.swift */,
+				163 /* ImagePicker.swift */,
+				204 /* ReportPostSheet.swift */,
+				208 /* EditPostSheet.swift */,
+				G23 /* Card */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		G22 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				170 /* Colors.swift */,
+				171 /* Fonts.swift */,
+				172 /* Spacing.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		G23 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				164 /* ContentCardView.swift */,
+				165 /* ForumCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		G30 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				GH0 /* Home */,
+				GS0 /* Search */,
+				GCR /* Create */,
+				G31 /* Rent */,
+				G32 /* Secondhand */,
+				G33 /* Ride */,
+				G34 /* Team */,
+				G35 /* Forum */,
+				G36 /* Chat */,
+				G37 /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		G31 /* Rent */ = {
+			isa = PBXGroup;
+			children = (
+				G31A /* Models */,
+				G31B /* Utils */,
+				G31C /* Services */,
+				G31D /* ViewModels */,
+				G31E /* Views */,
+			);
+			path = Rent;
+			sourceTree = "<group>";
+		};
+		G31A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				180 /* RentPost.swift */,
+				181 /* RentFilterOptions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G31B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				182 /* RentFormatter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		G31C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				183 /* RentService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G31D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				184 /* RentListViewModel.swift */,
+				185 /* RentDetailViewModel.swift */,
+				186 /* CreateRentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		G31E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				187 /* RentListView.swift */,
+				188 /* RentDetailView.swift */,
+				189 /* CreateRentView.swift */,
+				G31F /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G31F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				18A /* RentCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		G32 /* Secondhand */ = {
+			isa = PBXGroup;
+			children = (
+				G32A /* Models */,
+				G32S /* Services */,
+				G32E /* Views */,
+			);
+			path = Secondhand;
+			sourceTree = "<group>";
+		};
+		G32A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				190 /* SecondhandPost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G32E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				191 /* SecondhandListView.swift */,
+				193 /* CreateSecondhandView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G32S /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				192 /* SecondhandService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G33 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				G33A /* Models */,
+				G33S /* Services */,
+				G33E /* Views */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		G33A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A0 /* RidePost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G33E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A1 /* RideListView.swift */,
+				1A3 /* CreateRideView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G33S /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A2 /* RideService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G34 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				G34A /* Models */,
+				G34S /* Services */,
+				G34E /* Views */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		G34A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B0 /* TeamPost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G34E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B1 /* TeamListView.swift */,
+				1B3 /* CreateTeamView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G34S /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B2 /* TeamService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G35 /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				G35A /* Models */,
+				G35S /* Services */,
+				G35E /* Views */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
+		G35A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C0 /* ForumPost.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G35E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C1 /* ForumListView.swift */,
+				1C3 /* CreateForumView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G35S /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1C2 /* ForumService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G36 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				G36E /* Views */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		G36E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D1 /* ChatListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G37 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				G37A /* Models */,
+				G37S /* Services */,
+				G37D /* ViewModels */,
+				G37E /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		G37A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				202 /* UserPostSummary.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G37D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1E0 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		G37S /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				203 /* UserPostsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G37E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E1 /* ProfileView.swift */,
+				1E2 /* AuthView.swift */,
+				205 /* SupportCenterView.swift */,
+				206 /* UserPostsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GCR /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				GCRE /* Views */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		GCRE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CR11 /* CreatePostView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GH0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				GH1 /* Models */,
+				GH2 /* ViewModels */,
+				GH3 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		GH1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				H11 /* HomeCardItem.swift */,
+				H12 /* HomeQuickAction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GH2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				H21 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		GH3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				H31 /* HomeView.swift */,
+				GH4 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GH4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				H41 /* HomeHeaderView.swift */,
+				H42 /* HomeSearchBarView.swift */,
+				H43 /* QuickActionsRowView.swift */,
+				H44 /* SectionHeaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		GS0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				GSE /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		GSE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				S11 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCC /* CheeseApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE /* Build configuration list for PBXNativeTarget "CheeseApp" */;
+			buildPhases = (
+				DDD /* Sources */,
+				BBB /* Frameworks */,
+				FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheeseApp;
+			packageProductDependencies = (
+				DBA54B9B2F2D43DA0073E17A /* Auth */,
+				DBA54B9D2F2D43DA0073E17A /* Functions */,
+				DBA54B9F2F2D43DA0073E17A /* PostgREST */,
+				DBA54BA12F2D43DA0073E17A /* Realtime */,
+				DBA54BA32F2D43DA0073E17A /* Storage */,
+				DBA54BA62F2D44C30073E17A /* Supabase */,
+			);
+			productName = CheeseApp;
+			productReference = AAA /* CheeseApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PRJ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CCC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = BCL /* Build configuration list for PBXProject "CheeseApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = G00;
+			packageReferences = (
+				PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			productRefGroup = G02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCC /* CheeseApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001 /* CheeseAppApp.swift in Sources */,
+				002 /* MainTabView.swift in Sources */,
+				010 /* SupabaseClient.swift in Sources */,
+				020 /* BasePost.swift in Sources */,
+				021 /* User.swift in Sources */,
+				022 /* ChatMessage.swift in Sources */,
+				030 /* AuthService.swift in Sources */,
+				031 /* ChatService.swift in Sources */,
+				032 /* ImageUploadService.swift in Sources */,
+				040 /* Formatters.swift in Sources */,
+				041 /* Constants.swift in Sources */,
+				050 /* Date+Extensions.swift in Sources */,
+				051 /* View+Extensions.swift in Sources */,
+				060 /* CustomButton.swift in Sources */,
+				061 /* LoadingView.swift in Sources */,
+				062 /* ErrorView.swift in Sources */,
+				063 /* ImagePicker.swift in Sources */,
+				064 /* ContentCardView.swift in Sources */,
+				065 /* ForumCardView.swift in Sources */,
+				070 /* Colors.swift in Sources */,
+				071 /* Fonts.swift in Sources */,
+				072 /* Spacing.swift in Sources */,
+				080 /* RentPost.swift in Sources */,
+				081 /* RentFilterOptions.swift in Sources */,
+				082 /* RentFormatter.swift in Sources */,
+				083 /* RentService.swift in Sources */,
+				084 /* RentListViewModel.swift in Sources */,
+				085 /* RentDetailViewModel.swift in Sources */,
+				086 /* CreateRentViewModel.swift in Sources */,
+				087 /* RentListView.swift in Sources */,
+				088 /* RentDetailView.swift in Sources */,
+				089 /* CreateRentView.swift in Sources */,
+				08A /* RentCardView.swift in Sources */,
+				090 /* SecondhandPost.swift in Sources */,
+				091 /* SecondhandListView.swift in Sources */,
+				0A0 /* RidePost.swift in Sources */,
+				0A1 /* RideListView.swift in Sources */,
+				0B0 /* TeamPost.swift in Sources */,
+				0B1 /* TeamListView.swift in Sources */,
+				0C0 /* ForumPost.swift in Sources */,
+				0C1 /* ForumListView.swift in Sources */,
+				0D1 /* ChatListView.swift in Sources */,
+				0E0 /* AuthViewModel.swift in Sources */,
+				0E1 /* ProfileView.swift in Sources */,
+				0E2 /* AuthView.swift in Sources */,
+				200A /* PostKind.swift in Sources */,
+				201A /* CommunityService.swift in Sources */,
+				202A /* UserPostSummary.swift in Sources */,
+				203A /* UserPostsService.swift in Sources */,
+				204A /* ReportPostSheet.swift in Sources */,
+				205A /* SupportCenterView.swift in Sources */,
+				206A /* UserPostsView.swift in Sources */,
+				207A /* PostReactionService.swift in Sources */,
+				208A /* EditPostSheet.swift in Sources */,
+				H01 /* HomeCardItem.swift in Sources */,
+				H02 /* HomeQuickAction.swift in Sources */,
+				H03 /* HomeViewModel.swift in Sources */,
+				H04 /* HomeView.swift in Sources */,
+				H05 /* HomeHeaderView.swift in Sources */,
+				H06 /* HomeSearchBarView.swift in Sources */,
+				H07 /* QuickActionsRowView.swift in Sources */,
+				H08 /* SectionHeaderView.swift in Sources */,
+				S01 /* SearchView.swift in Sources */,
+				CR1 /* CreatePostView.swift in Sources */,
+				092 /* SecondhandService.swift in Sources */,
+				093 /* CreateSecondhandView.swift in Sources */,
+				0A2 /* RideService.swift in Sources */,
+				0A3 /* CreateRideView.swift in Sources */,
+				0B2 /* TeamService.swift in Sources */,
+				0B3 /* CreateTeamView.swift in Sources */,
+				0C2 /* ForumService.swift in Sources */,
+				0C3 /* CreateForumView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		TC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59RCF5754W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cheese;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timonayf.cheeseapp.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		TC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59RCF5754W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cheese;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timonayf.cheeseapp.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCL /* Build configuration list for PBXProject "CheeseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1 /* Debug */,
+				BC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE /* Build configuration list for PBXNativeTarget "CheeseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TC1 /* Debug */,
+				TC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBA54B9B2F2D43DA0073E17A /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		DBA54B9D2F2D43DA0073E17A /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		DBA54B9F2F2D43DA0073E17A /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		DBA54BA12F2D43DA0073E17A /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		DBA54BA32F2D43DA0073E17A /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		DBA54BA62F2D44C30073E17A /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKGREF1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = PRJ /* Project object */;
+}
